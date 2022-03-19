@@ -1,19 +1,17 @@
 <template>
   <v-card class="mx-auto" max-width="80vw">
-    <v-img :src="ovo.imagem" :alt="ovo.id"
+    <v-img :src="imagem" :alt="ovo.id"
         height="50 vh"
     ></v-img>
 
     <v-card-title>
-      {{ ovos.nome }}
+      {{ console.log('nome') }}
     </v-card-title>
 
     <v-card-subtitle>
         <div class="text-left">
              <v-card-text>
-                <p>Sabor: {{ ovos.sabor }}</p>
-                <p>Preço: {{ ovos.preco }}</p>
-                <p>Loja: {{ ovos.local.nome }}</p>
+        
         </v-card-text>
 
         </div>
@@ -27,10 +25,8 @@
   export default {
     name: 'CardItem',
     props: {
-        ovos: {
-            type: Array,
-            required: true
-        }
+        nome: undefined,
+        imagem: undefined,
     }
   }
 </script>
@@ -38,3 +34,4 @@
 <style scoped>
 
 </style>
+
