@@ -5,7 +5,7 @@
       color="primary"
       dark
     >
-      Rounded Button
+      Confirmar
     </v-btn>
     <validation-observer
     ref="observer"
@@ -22,6 +22,24 @@
           :counter="10"
           :error-messages="errors"
           label="Name"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="name"
+          :error-messages="errors"
+          label="userName"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="name"
+          :error-messages="errors"
+          label="Endereço"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="name"
+          :error-messages="errors"
+          label="Complemento"
           required
         ></v-text-field>
       </validation-provider>
