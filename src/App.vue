@@ -10,7 +10,7 @@
   </v-app>
   
 </template>
-
+./components/CardItem.vue
 <script>
 import AppBar from './components/shared/AppBar.vue'
 
