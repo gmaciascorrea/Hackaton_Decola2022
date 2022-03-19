@@ -1,13 +1,14 @@
 <template>
-  <v-main>
-    <CardItem/>
-  <v-main/>
+  <v-app>
+
+  </v-app>
 </template>
 
 <script>
 
   export default {
-    name: 'HomeView',
+    name: 'HomeView'
 
   }
+  
 </script>
