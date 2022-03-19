@@ -10,9 +10,12 @@
 
     <v-card-subtitle>
         <div class="text-left">
-            <p>Sabor: {{ ovos.sabor }}</p>
-            <p>Preço: {{ ovos.preco }}</p>
-            <p>Loja: {{ ovos.local.nome }}</p>
+             <v-card-text>
+                <p>Sabor: {{ ovos.sabor }}</p>
+                <p>Preço: {{ ovos.preco }}</p>
+                <p>Loja: {{ ovos.local.nome }}</p>
+        </v-card-text>
+
         </div>
       
     </v-card-subtitle>
