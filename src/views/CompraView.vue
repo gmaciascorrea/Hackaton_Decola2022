@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <h4>Escolha seu Estado:</h4>
     <v-combobox
       clearable
       filled
@@ -9,13 +10,25 @@
       v-model="select"
       v-bind:items="ufItems"
     ></v-combobox>
+    <CardItem
+      v-for="item in filtered" :key="item.id"
+    :nome="item.nome"
+    :id="item.id"
+    :url="item.imagem"
+    :preco="item.preco"
+    :sabor="item.sabor"
+    :local="item.local"
+    />
   </v-container>
 </template>
 
 <script>
+import CardItem from '../components/CardItem.vue'
 export default {
   name: "CompraView",
-
+  components: {
+    CardItem
+  },
   data() {
     return {
       ufItems: [],
