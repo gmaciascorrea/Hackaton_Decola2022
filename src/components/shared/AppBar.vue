@@ -1,39 +1,36 @@
 <template>
-    <div class="overflow-hidden">
-    <div class="text-center mb-8">
-      <v-btn
-        color="deep-purple"
-        outlined
-        @click="active = !active"
-      >
-        Toggle Navigation
-      </v-btn>
-    </div>
-
     <v-bottom-navigation
-      v-model="value"
-      :input-value="active"
-      color="indigo"
-    >
-      <v-btn>
-        <span>Recents</span>
+    v-model="value"
+    :background-color="color"
+    dark
+    shift
+    bottom
+    
+  >
+    <v-btn>
+      <span>Video</span>
 
-        <v-icon>mdi-history</v-icon>
-      </v-btn>
+      <v-icon>mdi-television-play</v-icon>
+    </v-btn>
 
-      <v-btn>
-        <span>Favorites</span>
+    <v-btn>
+      <span>Music</span>
 
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
+      <v-icon>mdi-music-note</v-icon>
+    </v-btn>
 
-      <v-btn>
-        <span>Nearby</span>
+    <v-btn>
+      <span>Book</span>
 
-        <v-icon>mdi-map-marker</v-icon>
-      </v-btn>
-    </v-bottom-navigation>
-  </div>
+      <v-icon>mdi-book</v-icon>
+    </v-btn>
+
+    <v-btn>
+      <span>Image</span>
+
+      <v-icon>mdi-image</v-icon>
+    </v-btn>
+  </v-bottom-navigation>
 </template>
 
 <script>
@@ -41,7 +38,7 @@ export default {
     name: 'AppBar',
     data(){
         return {
-            
+
         }
     }
 }
