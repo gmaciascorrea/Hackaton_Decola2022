@@ -1,6 +1,6 @@
 <template>
   <v-conteiner>
-    <h2 class="text-center">Todos os ovos</h2>
+    <h2 class="mt-5 text-h4 text-center">Todos os ovos</h2>
     <v-divide></v-divide>
     
     <CardItem
