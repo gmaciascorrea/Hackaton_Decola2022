@@ -1,6 +1,8 @@
 <template>
   <v-conteiner>
-    <h2>Todos os Ovos</h2>
+    <h2 class="text-center">Todos os ovos</h2>
+    <v-divide></v-divide>
+    
     <CardItem
       v-for="item in ovos" :key="item.id"
     :nome="item.nome"
