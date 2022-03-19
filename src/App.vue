@@ -8,6 +8,7 @@
     <AppBar/>
 
   </v-app>
+  
 </template>
 
 <script>
