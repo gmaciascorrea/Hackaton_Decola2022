@@ -1,40 +1,32 @@
 <template>
-  <v-card class="mx-auto" max-width="80vw">
-    <v-img :src="ovo.imagem" :alt="ovo.id"
-        height="50 vh"
-    ></v-img>
-
-    <v-card-title>
-      {{ ovos.nome }}
-    </v-card-title>
-
-    <v-card-subtitle>
-        <div class="text-left">
-             <v-card-text>
-                <p>Sabor: {{ ovos.sabor }}</p>
-                <p>Preço: {{ ovos.preco }}</p>
-                <p>Loja: {{ ovos.local.nome }}</p>
-        </v-card-text>
-
-        </div>
-      
-    </v-card-subtitle>
-
-  </v-card>
+  <v-container>
+    {{ nome }}
+    {{ id }}
+    {{ img }}
+    {{ preco }}
+    {{ sabor }}
+  </v-container>
 </template>
 
 <script>
-  export default {
-    name: 'CardItem',
-    props: {
-        ovos: {
-            type: Array,
-            required: true
-        }
-    }
-  }
+import { integer } from "vee-validate/dist/rules";
+export default {
+  name: "CardItem",
+  props: {
+    id: integer,
+    imagem: String,
+    local: {
+      cep: String,
+      endereco: String,
+      id: integer,
+      nome: String,
+    },
+    nome: String,
+    preco: String,
+    sabor: String,
+  },
+};
 </script>
 
 <style scoped>
-
 </style>
