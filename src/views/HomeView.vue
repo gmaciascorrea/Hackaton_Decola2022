@@ -1,7 +1,6 @@
 <template>
 
-  <h2>teste</h2>
-
+<div></div>
 </template>
 
 <script>
@@ -13,5 +12,5 @@
     components: {
       
   },}
-  
+
 </script>

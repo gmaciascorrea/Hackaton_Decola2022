@@ -1,16 +1,22 @@
 <template>
   <v-app>
 
-    <AppBar/>
+    
     <CardItem/>
+    
+    <CardItem/>
+    
+    <CardItem/>
+
     <v-main>
       <router-view/>
     </v-main>
+    <AppBar/>
   </v-app>
+  
 </template>
 
 <script>
-
 
 
 import CardItem from './components/shared/CardItem'
