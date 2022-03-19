@@ -11,23 +11,24 @@
       v-bind:items="ufItems"
     ></v-combobox>
     <CardItem
-      v-for="item in filtered" :key="item.id"
-    :nome="item.nome"
-    :id="item.id"
-    :url="item.imagem"
-    :preco="item.preco"
-    :sabor="item.sabor"
-    :local="item.local"
+      v-for="item in filtered"
+      :key="item.id"
+      :nome="item.nome"
+      :id="item.id"
+      :url="item.imagem"
+      :preco="item.preco"
+      :sabor="item.sabor"
+      :local="item.local"
     />
   </v-container>
 </template>
 
 <script>
-import CardItem from '../components/CardItem.vue'
+import CardItem from "../components/CardItem.vue";
 export default {
   name: "CompraView",
   components: {
-    CardItem
+    CardItem,
   },
   data() {
     return {
@@ -41,6 +42,7 @@ export default {
       .then((response) => response.json())
       .then((json) => {
         this.ovo = json;
+        this.filtered = json;
         var aux = [];
         for (let i in json) {
           aux = json[i].local.endereco.split(" ");
@@ -62,7 +64,7 @@ export default {
           }
         }
       }
-      if(item === null){
+      if (item === null) {
         this.filtered = this.ovo;
       }
       console.log(this.filtered);
