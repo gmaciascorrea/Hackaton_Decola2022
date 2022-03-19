@@ -20,7 +20,7 @@
           md="4"
         >
           <v-text-field
-            v-model="lastname"
+            v-model="username"
             :rules="nameRules"
             :counter="12"
             label="Nome de usuário"
@@ -44,7 +44,7 @@
           md="4"
         >
           <v-text-field
-            v-model="lastname"
+            v-model="numero"
             :rules="nameRules"
             label="Número"
             required
@@ -55,7 +55,7 @@
           md="4"
         >
           <v-text-field
-            v-model="lastname"
+            v-model="cep"
             :rules="nameRules"
             label="CEP"
             required
@@ -66,7 +66,7 @@
           md="4"
         >
           <v-text-field
-            v-model="lastname"
+            v-model="complemento"
             :rules="nameRules"
             label="Complemento"
             required
@@ -90,9 +90,12 @@
     data: () => ({
       valid: false,
       firstname: '',
-      lastname: '',
+      username: '',
+      numero:'',
+      cep:'',
+      complemento:'',
       nameRules: [
-        v => !!v || 'Name is required',
+        v => !!v || 'Campo obrigatório!',
         v => v.length <= 10 || 'Name must be less than 10 characters',
       ],
       email: '',
