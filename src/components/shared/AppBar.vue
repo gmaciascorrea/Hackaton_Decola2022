@@ -17,9 +17,9 @@
         </v-btn>
       </router-link>
 
-      <router-link class="ma-auto" to="/venda">
+      <router-link class="ma-auto" to="/cadastro">
         <v-btn>
-          <span>Venda</span>
+          <span>Cadastro</span>
 
           <v-icon>mdi-card-text-outline</v-icon>
         </v-btn>

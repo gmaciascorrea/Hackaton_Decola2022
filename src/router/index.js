@@ -18,8 +18,8 @@ const routes = [
     component: CompraView
   },
   {
-    path: '/venda',
-    name: 'venda',
+    path: '/cadastro',
+    name: 'cadastro',
     component: VendaView
   },
   
