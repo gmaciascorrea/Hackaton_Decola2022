@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <h4>Escolha seu Estado:</h4>
+  <v-container class="pa-5 text-center">
+    <h2 class="text-h5 my-5">Escolha o ovo de páscoa que mais te agrada</h2>
     <v-combobox
       clearable
       filled
@@ -9,6 +9,7 @@
       v-on:change="filtrar($event)"
       v-model="select"
       v-bind:items="ufItems"
+      placeholder="Escolha seu estado"
     ></v-combobox>
     <CardItem
       v-for="item in filtered"
