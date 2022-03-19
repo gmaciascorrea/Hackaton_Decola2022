@@ -1,59 +1,44 @@
 <template>
-    <div color = "purple" class ="App-bottom" >
-    <v-app-bar color="yellow lighten-4" app bottom>
-    <v-bottom-navigation border:none background-color ="yellow lighten-4" color="pink lighten-4" v-model="value">
-    
+  <div class="app-bottom">
+    <v-bottom-navigation :value="value" color="blue lighten-4" grow app>
+      <router-link class="ma-auto" to="/">
+        <v-btn>
+          <span>Início</span>
 
-    
-      <v-btn background color="yellow lighten-4" class="button" value="Home">
-        <span>Home</span>
-        <router-link to ="/">
-        <v-icon>mdi-home</v-icon>
-        </router-link >
-      </v-btn>
-    
-    
-    
-        <v-btn background color="yellow lighten-4" class="button" value="Pesquisar">
-        <span>Pesquisar</span>
-        <router-link to ="/compra">
-         <v-icon > mdi-magnify</v-icon>
-        </router-link>
+          <v-icon>mdi-home</v-icon>
         </v-btn>
-     
-    
-    
-      <v-btn background color="yellow lighten-4" class="button" value="carrinho">
-      <span>Cadastro</span>
-      <router-link class="router" to = "/venda">
-      <v-icon>mdi-card-text-outline</v-icon>
-       </router-link> 
-      </v-btn>
+      </router-link>
 
-    
+      <router-link class="ma-auto" to="/compra">
+        <v-btn>
+          <span>Pesquisar</span>
 
-  </v-bottom-navigation>
-  </v-app-bar>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
+      </router-link>
+
+      <router-link class="ma-auto" to="/venda">
+        <v-btn>
+          <span>Venda</span>
+
+          <v-icon>mdi-card-text-outline</v-icon>
+        </v-btn>
+      </router-link>
+    </v-bottom-navigation>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'AppBar',
-    data(){
-        return {
-
-        }
-    }
-}
+  name: "AppBar",
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style scoped>
- .App-bottom a {
-    text-decoration: none ;
-   }
-  
-  
-  
-
+.app-bottom a {
+  text-decoration: none;
+}
 </style>
