@@ -20,6 +20,7 @@ export default {
     return {
       ufItems: [],
       ovo: [],
+      filtered: [],
     };
   },
   created() {
@@ -37,16 +38,21 @@ export default {
   },
   methods: {
     filtrar(item) {
-      var ufItem;
-      var filteredOvo;
+      this.filtered = [];
+      // console.log(item);
       for (let i in this.ovo) {
-        ufItem = this.ovo[i].local.endereco.split(" ");
-        ufItem = ufItem[ufItem.length - 1];
-        if(ufItem == item){
-          filteredOvo.push(this.ovo[i]);
-          console.log('igual')
+        var aux = this.ovo[i].local.endereco.split(" ");
+        var ufItem = aux[aux.length - 1];
+        if (item !== null) {
+          if (ufItem === item) {
+            this.filtered.push(this.ovo[i]);
+          }
         }
       }
+      if(item === null){
+        this.filtered = this.ovo;
+      }
+      console.log(this.filtered);
     },
   },
 };
