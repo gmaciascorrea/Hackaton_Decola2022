@@ -5,7 +5,7 @@
     <v-main>
       <router-view/>
     </v-main>
-
+    
   </v-app>
 </template>
 
@@ -13,9 +13,7 @@
 import CardItem from './components/shared/CardItem.vue'
 export default {
   name: 'App',
-  components: {
-    CardItem
-  },
+
   data: () => ({
     //
   }),

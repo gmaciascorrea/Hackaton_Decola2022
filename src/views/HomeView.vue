@@ -1,4 +1,7 @@
 <template>
+  <v-main>
+    <CardItem/>
+  <v-main/>
 </template>
 
 <script>
