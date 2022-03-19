@@ -4,10 +4,7 @@
     
     <CardItem/>
     
-    <CardItem/>
     
-    <CardItem/>
-
     <v-main>
       <router-view/>
     </v-main>
